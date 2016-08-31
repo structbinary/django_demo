@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Comment</title>
+</head>
+<body>
+<form action="/articles/add_comment/{{article.id}}/" method="post">
+    {% csrf_token %}
+    <ul>{{form.as_ul}}</ul>
+    <input type="submit" name="submit" value="Post Comment">
+</form>
+</body>
+</html>
